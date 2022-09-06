@@ -3,8 +3,8 @@ FROM ubuntu:20.04
 # https://github.com/moby/moby/issues/4032#issuecomment-163689851
 # https://github.com/moby/moby/issues/4032#issuecomment-192327844
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt update --fix-missing && apt upgrade -y
-RUN apt install -y \
+RUN apt-get update --fix-missing && apt-get upgrade -y
+RUN apt-get install -y \
     wget \
     tar \
     openjdk-11-jdk
