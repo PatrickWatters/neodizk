@@ -9,8 +9,8 @@ RUN apt install -y \
     tar \
     openjdk-11-jdk
 
-ENV SPARK_VERSION=3.1.2
-ENV HADOOP_VERSION=3.2
+ENV SPARK_VERSION=3.3.0
+ENV HADOOP_VERSION=3
 ENV SPARK_HOME=/root/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}
 
 ENV SPARK_MASTER_PORT=7077
@@ -18,7 +18,7 @@ ENV SPARK_UI_PORT=8080
 
 # Download spark binaries
 RUN cd /tmp && \
-    wget https://apache.mirrors.nublue.co.uk/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz
+    wget https://dlcdn.apache.org/spark/spark-3.3.0/spark-3.3.0-bin-hadoop3.tgz
 
 # Install spark binaries to home directory (matching flintrock)
 RUN cd ~ && \
