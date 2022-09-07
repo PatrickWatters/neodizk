@@ -259,9 +259,9 @@ public class Profiler {
       }
     } else {
       final String app = "zksnark-large";
-      final int numExecutors = 1;
+      final int numExecutors = 2;
       final int numCores = 1;
-      final int numMemory = 8;
+      final int numMemory = 2;
       final int size = 1024;
 
       final int numPartitions = SparkUtils.numPartitions(numExecutors, size);
