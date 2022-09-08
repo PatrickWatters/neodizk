@@ -242,7 +242,7 @@ public class ZKSNARKProfiling {
     final JavaPairRDD<Long, BN254bFr> fullAssignment = construction._3();
 
 
-    config.setContext("ETELogging");
+    config.setContext("ETE-Dist-Logging");
 
     //config.setContext("Setup");
     config.beginRuntimeMetadata("Size (inputs)", numConstraints);
@@ -252,23 +252,23 @@ public class ZKSNARKProfiling {
     config.beginRuntimeMetadata("Memory", Long.valueOf(config.numMmeory()));
     config.beginLog(config.context());
 
-
+    config.beginLog("Setup");
     config.beginRuntime("Setup");
     final CRS<BN254bFr, BN254bG1, BN254bG2,BN254bGT> CRS =
         DistributedSetup.generate(r1cs, fieldFactory, g1Factory, g2Factory, pairing, config);
-    //config.endLog(config.context());
+    config.endLog("Setup");
     config.endRuntime("Setup");
 
     //config.writeRuntimeLog(config.context());
     //config.setContext("Prover");
     //config.beginRuntimeMetadata("Size (inputs)", numConstraints);
-    //config.beginLog(config.context());
+    config.beginLog("Prover");
     
 
     config.beginRuntime("Prover");
     final Proof<BN254bG1, BN254bG2> proof =
         DistributedProver.prove(CRS.provingKeyRDD(), primary, fullAssignment, fieldFactory, config);
-    //config.endLog(config.context());
+    config.endLog("Prover");
     config.endRuntime("Prover");
 
     //config.writeRuntimeLog(config.context());
@@ -276,13 +276,13 @@ public class ZKSNARKProfiling {
     //config.setContext("Verifier-for-");
     //config.beginRuntimeMetadata("Size (inputs)", numConstraints);
 
-    //config.beginLog(config.context());
+    config.beginLog("Verifier-for-");
     config.beginRuntime("Verifier");
     final boolean isValid = Verifier.verify(CRS.verificationKey(), primary, proof, pairing, config);
     config.beginRuntimeMetadata("isValid", isValid ? 1L : 0L);
+    config.endLog("Verifier-for-");
     config.endLog(config.context());
     config.endRuntime("Verifier");
-
     config.writeRuntimeLog(config.context());
 
     System.out.println(isValid);
