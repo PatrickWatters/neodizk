@@ -56,7 +56,9 @@ public class Configuration implements Serializable {
 
   /* Debug Flag runs assertion checks for debugging */
   private boolean debugFlag;
-
+  
+  //private StatsStorage stats_collector;
+  
   public Configuration() {
     seed = 5;
     secureSeed = null;
@@ -72,7 +74,7 @@ public class Configuration implements Serializable {
     rootDirectory = "/tmp/spark-events/";
     runtimeFiles = new HashMap<>();
     runtimeLogs = new HashMap<>();
-
+    
     numExecutors = 1;
     numCores = 1;
     numMemory = 2;
@@ -80,6 +82,7 @@ public class Configuration implements Serializable {
     storageLevel = StorageLevel.MEMORY_AND_DISK_SER();
 
     debugFlag = false;
+   // stats_collector = new StatsStorage();
   }
 
   public Configuration(
@@ -97,6 +100,7 @@ public class Configuration implements Serializable {
     this.sc = sc;
     this.storageLevel = storageLevel;
     sc.setLogLevel("ERROR");
+   // stats_collector = new StatsStorage();
   }
 
   /** Prints the message and stores the current time for tracking runtime. */
@@ -271,25 +275,25 @@ public class Configuration implements Serializable {
         final StringBuilder sb = new StringBuilder();
         if (keyList.size() == valueList.size()) {
           // Write the CSV headers if they haven't been written yet.
-          // if (!runtimeFiles.get(context)._2) {
-          //     for (int i = 0; i < keyList.size(); i++) {
-          //         sb.append(keyList.get(i));
-          //
+          if (!runtimeFiles.get(context)._2) {
+              for (int i = 0; i < keyList.size(); i++) {
+                   sb.append(keyList.get(i));
+          
           //         // Append time denomination, if not metadata.
-          //         if (valueList.get(i).isEmpty() || valueList.get(i).peek()._2 != null) {
-          //             sb.append(" (sec)");
-          //         }
+                   if (valueList.get(i).isEmpty() || valueList.get(i).peek()._2 != null) {
+                       sb.append(" (sec)");
+                   }
           //
-          //         if (i < keyList.size() - 1) {
-          //             sb.append(",");
-          //         } else {
-          //             sb.append("\n");
-          //         }
-          //     }
+                   if (i < keyList.size() - 1) {
+                       sb.append(",");
+                   } else {
+                       sb.append("\n");
+                   }
+               }
           //
           //     // Record that the header has now been written.
-          //     runtimeFiles.put(context, new Tuple2<>(runtimeFileName, true));
-          // }
+               runtimeFiles.put(context, new Tuple2<>(runtimeFileName, true));
+           }
           // Write the CSV values row-wise.
           for (int i = 0; i < valueList.size(); i++) {
             if (!valueList.get(i).isEmpty() && valueList.get(i).peek()._2 == null) {
