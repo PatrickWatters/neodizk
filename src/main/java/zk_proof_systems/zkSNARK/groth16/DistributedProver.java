@@ -39,12 +39,15 @@ public class DistributedProver {
     // if (config.debugFlag()) {
     //  assert (provingKey.r1cs().isSatisfied(primary, fullAssignment));
     // }
+    config.beginRuntime("Witness polynomial Computation");
 
     config.beginLog("Computing witness polynomial");
     final QAPWitnessRDD<FieldT> qapWitness =
         R1CStoQAPRDD.R1CStoQAPWitness(
             provingKey.r1cs(), primary, fullAssignment, fieldFactory, config);
     config.endLog("Computing witness polynomial");
+    
+    config.endRuntime("Witness polynomial Computation");
 
     if (config.debugFlag()) {
       // We are dividing degree 2(d-1) polynomial by degree d polynomial
