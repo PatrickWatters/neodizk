@@ -256,6 +256,7 @@ public class Configuration implements Serializable {
    * length of the keyList and valueList do not match, then nothing is done. If any record for a
    * respective header has boolean value false, then that record is logged as -1.
    */
+
   public void writeRuntimeLog(final String context) {
     if (!runtimeFlag) {
       return;
@@ -274,7 +275,12 @@ public class Configuration implements Serializable {
 
         final StringBuilder sb = new StringBuilder();
         if (keyList.size() == valueList.size()) {
+
           // Write the CSV headers if they haven't been written yet.
+          //File tfile = new File(runtimeFileName);
+          //if(tfile.exists() && !tfile.isDirectory()) { 
+
+
           if (!runtimeFiles.get(context)._2) {
               for (int i = 0; i < keyList.size(); i++) {
                    sb.append(keyList.get(i));

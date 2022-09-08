@@ -63,45 +63,47 @@ public class ZKSNARKProfiling {
     final R1CSRelation<BN254aFr> r1cs = construction._1();
     final Assignment<BN254aFr> primary = construction._2();
     final Assignment<BN254aFr> auxiliary = construction._3();
+    config.setContext("ETE-SNARK-Logging");
 
-    config.setContext("Setup-Serial");
+    //config.setContext("Setup-Serial");
     config.beginRuntimeMetadata("Size (inputs)", numConstraints);
-
+    config.beginRuntimeMetadata("Executors", Long.valueOf(config.numExecutors()));
+    config.beginRuntimeMetadata("Partitions", Long.valueOf(config.numPartitions()));
+    config.beginRuntimeMetadata("Cores", Long.valueOf(config.numCores()));
+    config.beginRuntimeMetadata("Memory", Long.valueOf(config.numMmeory()));
     config.beginLog(config.context());
+    config.beginLog("Setup-Serial");
+
     config.beginRuntime("Setup");
-    
-    //***uncomment the two lines below for grothBGM17, and comment out the two lines below to disable groth16 
-    //final CRS<BN254aFr, BN254aG1, BN254aG2> CRS =
-    //    SerialSetup.generate(r1cs, fieldFactory, g1Factory, g2Factory, config);
-    
-    //***uncomment the two lines below for gorth16, and comment out the two lines above to disable grothBGM17 
+
     final CRS<BN254aFr, BN254aG1, BN254aG2, BN254aGT> CRS =
         SerialSetup.generate(r1cs, fieldFactory, g1Factory, g2Factory, pairing, config);
     
         config.endLog(config.context());
     config.endRuntime("Setup");
 
-    config.writeRuntimeLog(config.context());
+    //config.writeRuntimeLog(config.context());
 
-    config.setContext("Prover-Serial");
-    config.beginRuntimeMetadata("Size (inputs)", numConstraints);
+    //config.setContext("Prover-Serial");
+    //config.beginRuntimeMetadata("Size (inputs)", numConstraints);
 
-    config.beginLog(config.context());
+    config.beginLog("Prover-Serial");
     config.beginRuntime("Prover");
     final Proof<BN254aG1, BN254aG2> proof =
         SerialProver.prove(CRS.provingKey(), primary, auxiliary, fieldFactory, config);
-    config.endLog(config.context());
-    config.endRuntime("Prover");
+        config.endLog("Prover-Serial");
+        config.endRuntime("Prover");
 
-    config.writeRuntimeLog(config.context());
+    //config.writeRuntimeLog(config.context());
 
-    config.setContext("Verifier-for-Serial");
-    config.beginRuntimeMetadata("Size (inputs)", numConstraints);
+   // config.setContext("Verifier-for-Serial");
+   // config.beginRuntimeMetadata("Size (inputs)", numConstraints);
 
-    config.beginLog(config.context());
+    config.beginLog("Verifier-for-Serial");
     config.beginRuntime("Verifier");
     final boolean isValid = Verifier.verify(CRS.verificationKey(), primary, proof, pairing, config);
     config.beginRuntimeMetadata("isValid", isValid ? 1L : 0L);
+    config.endLog("Verifier-for-Serial");
     config.endLog(config.context());
     config.endRuntime("Verifier");
 
@@ -112,7 +114,7 @@ public class ZKSNARKProfiling {
   }
 
   public static void serialzkSNARKLargeProfiling(
-      final Configuration config, final long numConstraints) {
+    final Configuration config, final long numConstraints) {
     final int numInputs = 1023;
 
     final BN254bFr fieldFactory = new BN254bFr(2L);
@@ -126,37 +128,44 @@ public class ZKSNARKProfiling {
     final Assignment<BN254bFr> primary = construction._2();
     final Assignment<BN254bFr> auxiliary = construction._3();
 
-    config.setContext("Setup-Serial");
+    config.setContext("ETE-SNARK-Logging");
+    //config.setContext("Setup-Serial");
     config.beginRuntimeMetadata("Size (inputs)", numConstraints);
-
+    config.beginRuntimeMetadata("Executors", Long.valueOf(config.numExecutors()));
+    config.beginRuntimeMetadata("Partitions", Long.valueOf(config.numPartitions()));
+    config.beginRuntimeMetadata("Cores", Long.valueOf(config.numCores()));
+    config.beginRuntimeMetadata("Memory", Long.valueOf(config.numMmeory()));
     config.beginLog(config.context());
+    config.beginLog("Setup-Serial");
+
     config.beginRuntime("Setup");
     final CRS<BN254bFr, BN254bG1, BN254bG2, BN254bGT> CRS =
         SerialSetup.generate(r1cs, fieldFactory, g1Factory, g2Factory, pairing, config);
-    config.endLog(config.context());
+    config.endLog("Setup-Serial");
     config.endRuntime("Setup");
 
-    config.writeRuntimeLog(config.context());
+    //config.writeRuntimeLog(config.context());
 
-    config.setContext("Prover-Serial");
-    config.beginRuntimeMetadata("Size (inputs)", numConstraints);
+    //config.setContext("Prover-Serial");
+    //config.beginRuntimeMetadata("Size (inputs)", numConstraints);
 
-    config.beginLog(config.context());
+    config.beginLog("Prover-Serial");
     config.beginRuntime("Prover");
     final Proof<BN254bG1, BN254bG2> proof =
         SerialProver.prove(CRS.provingKey(), primary, auxiliary, fieldFactory, config);
-    config.endLog(config.context());
+    config.endLog("Prover-Serial");
     config.endRuntime("Prover");
 
-    config.writeRuntimeLog(config.context());
+   // config.writeRuntimeLog(config.context());
 
-    config.setContext("Verifier-for-Serial");
-    config.beginRuntimeMetadata("Size (inputs)", numConstraints);
+   // config.setContext("Verifier-for-Serial");
+   // config.beginRuntimeMetadata("Size (inputs)", numConstraints);
 
-    config.beginLog(config.context());
+    config.beginLog("Verifier-for-Serial");
     config.beginRuntime("Verifier");
     final boolean isValid = Verifier.verify(CRS.verificationKey(), primary, proof, pairing, config);
     config.beginRuntimeMetadata("isValid", isValid ? 1L : 0L);
+    config.endLog("Verifier-for-Serial");
     config.endLog(config.context());
     config.endRuntime("Verifier");
 
@@ -165,6 +174,8 @@ public class ZKSNARKProfiling {
     System.out.println(isValid);
     assert (isValid);
   }
+
+
 
   public static void distributedzkSNARKProfiling(
       final Configuration config, final long numConstraints) {
@@ -175,44 +186,52 @@ public class ZKSNARKProfiling {
     final BN254aG2 g2Factory = new BN254aG2Parameters().ONE();
     final BN254aPairing pairing = new BN254aPairing();
 
+    
     final Tuple3<R1CSRelationRDD<BN254aFr>, Assignment<BN254aFr>, JavaPairRDD<Long, BN254aFr>>
         construction =
             R1CSConstructor.parallelConstruct(numConstraints, numInputs, fieldFactory, config);
     final R1CSRelationRDD<BN254aFr> r1cs = construction._1();
     final Assignment<BN254aFr> primary = construction._2();
     final JavaPairRDD<Long, BN254aFr> fullAssignment = construction._3();
-
-    config.setContext("Setup");
+    
+    config.setContext("ETE-SNARK-Logging");
+    //config.setContext("Setup");
     config.beginRuntimeMetadata("Size (inputs)", numConstraints);
-
+    config.beginRuntimeMetadata("Executors", Long.valueOf(config.numExecutors()));
+    config.beginRuntimeMetadata("Partitions", Long.valueOf(config.numPartitions()));
+    config.beginRuntimeMetadata("Cores", Long.valueOf(config.numCores()));
+    config.beginRuntimeMetadata("Memory", Long.valueOf(config.numMmeory()));
     config.beginLog(config.context());
+
+    config.beginLog("Setup-Dist");
     config.beginRuntime("Setup");
     final CRS<BN254aFr, BN254aG1, BN254aG2, BN254aGT> CRS =
         DistributedSetup.generate(r1cs, fieldFactory, g1Factory, g2Factory, pairing, config);
-    config.endLog(config.context());
+    config.endLog("Setup-Dist");
     config.endRuntime("Setup");
 
-    config.writeRuntimeLog(config.context());
+    //config.writeRuntimeLog(config.context());
 
-    config.setContext("Prover");
-    config.beginRuntimeMetadata("Size (inputs)", numConstraints);
+    //config.setContext("Prover");
+    //config.beginRuntimeMetadata("Size (inputs)", numConstraints);
 
-    config.beginLog(config.context());
+    config.beginLog("Prover-Dist");
     config.beginRuntime("Prover");
     final Proof<BN254aG1, BN254aG2> proof =
         DistributedProver.prove(CRS.provingKeyRDD(), primary, fullAssignment, fieldFactory, config);
-    config.endLog(config.context());
+    //config.endLog(config.context());
+    config.endLog("Prover-Dist");
     config.endRuntime("Prover");
+    //config.writeRuntimeLog(config.context());
 
-    config.writeRuntimeLog(config.context());
+    //config.setContext("Verifier-for-");
+    //config.beginRuntimeMetadata("Size (inputs)", numConstraints);
 
-    config.setContext("Verifier-for-");
-    config.beginRuntimeMetadata("Size (inputs)", numConstraints);
-
-    config.beginLog(config.context());
+    config.beginLog("Verifier-for-Dist");
     config.beginRuntime("Verifier");
     final boolean isValid = Verifier.verify(CRS.verificationKey(), primary, proof, pairing, config);
     config.beginRuntimeMetadata("isValid", isValid ? 1L : 0L);
+    config.endLog("Verifier-for-Dist");
     config.endLog(config.context());
     config.endRuntime("Verifier");
 
@@ -221,7 +240,6 @@ public class ZKSNARKProfiling {
     System.out.println(isValid);
     assert (isValid);
   }
-
 
 
 
@@ -242,7 +260,7 @@ public class ZKSNARKProfiling {
     final JavaPairRDD<Long, BN254bFr> fullAssignment = construction._3();
 
 
-    config.setContext("ETE-Dist-Logging");
+    config.setContext("ETE-SNARK-Logging");
 
     //config.setContext("Setup");
     config.beginRuntimeMetadata("Size (inputs)", numConstraints);
@@ -252,23 +270,23 @@ public class ZKSNARKProfiling {
     config.beginRuntimeMetadata("Memory", Long.valueOf(config.numMmeory()));
     config.beginLog(config.context());
 
-    config.beginLog("Setup");
+    config.beginLog("Setup-Dist");
     config.beginRuntime("Setup");
     final CRS<BN254bFr, BN254bG1, BN254bG2,BN254bGT> CRS =
         DistributedSetup.generate(r1cs, fieldFactory, g1Factory, g2Factory, pairing, config);
-    config.endLog("Setup");
+    config.endLog("Setup-Dist");
     config.endRuntime("Setup");
 
     //config.writeRuntimeLog(config.context());
     //config.setContext("Prover");
     //config.beginRuntimeMetadata("Size (inputs)", numConstraints);
-    config.beginLog("Prover");
+    config.beginLog("Prover-Dist");
     
 
     config.beginRuntime("Prover");
     final Proof<BN254bG1, BN254bG2> proof =
         DistributedProver.prove(CRS.provingKeyRDD(), primary, fullAssignment, fieldFactory, config);
-    config.endLog("Prover");
+    config.endLog("Prover-Dist");
     config.endRuntime("Prover");
 
     //config.writeRuntimeLog(config.context());
@@ -276,11 +294,11 @@ public class ZKSNARKProfiling {
     //config.setContext("Verifier-for-");
     //config.beginRuntimeMetadata("Size (inputs)", numConstraints);
 
-    config.beginLog("Verifier-for-");
+    config.beginLog("Verifier-for-Dist");
     config.beginRuntime("Verifier");
     final boolean isValid = Verifier.verify(CRS.verificationKey(), primary, proof, pairing, config);
     config.beginRuntimeMetadata("isValid", isValid ? 1L : 0L);
-    config.endLog("Verifier-for-");
+    config.endLog("Verifier-for-Dist");
     config.endLog(config.context());
     config.endRuntime("Verifier");
     config.writeRuntimeLog(config.context());

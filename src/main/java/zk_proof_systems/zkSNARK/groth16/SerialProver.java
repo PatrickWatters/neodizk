@@ -36,12 +36,12 @@ public class SerialProver {
       assert (provingKey.r1cs().isSatisfied(primary, auxiliary));
     }
 
-    config.beginRuntime("Witness");
+    config.beginRuntime("Witness polynomial computation");
     config.beginLog("Computing witness polynomial");
     final QAPWitness<FieldT> qapWitness =
         R1CStoQAP.R1CStoQAPWitness(provingKey.r1cs(), primary, auxiliary, fieldFactory, config);
     config.endLog("Computing witness polynomial");
-    config.endRuntime("Witness");
+    config.endRuntime("Witness polynomial computation");
 
     if (config.debugFlag()) {
       // We are dividing degree 2(d-1) polynomial by degree d polynomial
@@ -74,7 +74,7 @@ public class SerialProver {
     final int numPrimary = provingKey.r1cs().numPrimary();
     final int numVariables = provingKey.r1cs().numVariables();
 
-    config.beginRuntime("Proof");
+    config.beginRuntime("Generate proof");
 
     config.beginLog("Computing evaluation to query A: summation of variable_i*A_i(t)");
     G1T evaluationAt =
@@ -122,7 +122,7 @@ public class SerialProver {
     // r*s*delta
     final G1T C = evaluationABC.add(A.mul(s)).add(B._1.mul(r)).sub(rsDelta);
 
-    config.endRuntime("Proof");
+    config.endRuntime("Generate proof");
 
     return new Proof<>(A, B._2, C);
   }
