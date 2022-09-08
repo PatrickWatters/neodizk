@@ -256,27 +256,27 @@ public class ZKSNARKProfiling {
     config.beginRuntime("Setup");
     final CRS<BN254bFr, BN254bG1, BN254bG2,BN254bGT> CRS =
         DistributedSetup.generate(r1cs, fieldFactory, g1Factory, g2Factory, pairing, config);
-    config.endLog(config.context());
+    //config.endLog(config.context());
     config.endRuntime("Setup");
 
     //config.writeRuntimeLog(config.context());
-
     //config.setContext("Prover");
     //config.beginRuntimeMetadata("Size (inputs)", numConstraints);
-
     //config.beginLog(config.context());
+    
+
     config.beginRuntime("Prover");
     final Proof<BN254bG1, BN254bG2> proof =
         DistributedProver.prove(CRS.provingKeyRDD(), primary, fullAssignment, fieldFactory, config);
-    config.endLog(config.context());
+    //config.endLog(config.context());
     config.endRuntime("Prover");
 
-    config.writeRuntimeLog(config.context());
+    //config.writeRuntimeLog(config.context());
 
-    config.setContext("Verifier-for-");
-    config.beginRuntimeMetadata("Size (inputs)", numConstraints);
+    //config.setContext("Verifier-for-");
+    //config.beginRuntimeMetadata("Size (inputs)", numConstraints);
 
-    config.beginLog(config.context());
+    //config.beginLog(config.context());
     config.beginRuntime("Verifier");
     final boolean isValid = Verifier.verify(CRS.verificationKey(), primary, proof, pairing, config);
     config.beginRuntimeMetadata("isValid", isValid ? 1L : 0L);
