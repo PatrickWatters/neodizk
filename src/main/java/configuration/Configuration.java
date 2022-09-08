@@ -371,6 +371,14 @@ public class Configuration implements Serializable {
     return numExecutors;
   }
 
+  public int numCores() {
+    return numCores;
+  }
+
+  public int numMmeory() {
+    return numMemory;
+  }
+
   public StorageLevel storageLevel() {
     return storageLevel;
   }

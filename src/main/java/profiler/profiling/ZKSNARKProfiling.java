@@ -222,6 +222,9 @@ public class ZKSNARKProfiling {
     assert (isValid);
   }
 
+
+
+
   public static void distributedzkSNARKLargeProfiling(
       final Configuration config, final long numConstraints) {
     final int numInputs = 1023;
@@ -239,7 +242,11 @@ public class ZKSNARKProfiling {
     final JavaPairRDD<Long, BN254bFr> fullAssignment = construction._3();
 
     config.setContext("Setup");
-    config.beginRuntimeMetadata("Size (numConstraints)", numConstraints);
+    config.beginRuntimeMetadata("Size (inputs)", numConstraints);
+    config.beginRuntimeMetadata("Executors", Long.valueOf(config.numExecutors()));
+    config.beginRuntimeMetadata("Partitions", Long.valueOf(config.numPartitions()));
+    config.beginRuntimeMetadata("Cores", Long.valueOf(config.numCores()));
+    config.beginRuntimeMetadata("Memory", Long.valueOf(config.numMmeory()));
 
     config.beginLog(config.context());
     config.beginRuntime("Setup");
