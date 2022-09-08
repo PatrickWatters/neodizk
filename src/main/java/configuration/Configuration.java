@@ -289,7 +289,7 @@ public class Configuration implements Serializable {
                    }
           //
                    if (i < keyList.size() - 1) {
-                       sb.append(",");
+                       sb.append("\t");
                    } else {
                        sb.append("\n");
                    }
@@ -310,7 +310,7 @@ public class Configuration implements Serializable {
             }
 
             if (i < valueList.size() - 1) {
-              sb.append(",");
+              sb.append("\t");
             } else {
               sb.append("\n");
             }
@@ -435,7 +435,7 @@ public class Configuration implements Serializable {
   private void newRuntimeLog(final String context, final String... headers) {
     // If runtimeFiles does not contain this context, then record a context and file name.
     if (!runtimeFiles.containsKey(context)) {
-      final String runtimeFileName = rootDirectory + "src/main/resources/logs/" + context + ".csv";
+      final String runtimeFileName = rootDirectory + "src/main/resources/logs/" + context + ".tsv";
 
       runtimeFiles.put(context, new Tuple2<>(runtimeFileName, false));
     }
