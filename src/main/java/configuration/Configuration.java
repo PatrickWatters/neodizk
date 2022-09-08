@@ -370,7 +370,9 @@ public class Configuration implements Serializable {
             + "mem-"
             + numPartitions
             + "partitions";
-    context = _context + metadata;
+    //context = _context + metadata;
+    context = _context;
+
   }
 
   public int numExecutors() {
