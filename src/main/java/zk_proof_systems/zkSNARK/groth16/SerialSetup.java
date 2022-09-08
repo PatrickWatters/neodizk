@@ -106,7 +106,7 @@ public class SerialSetup {
     config.endLog("Generating G2 MSM Window Table");
 
     config.beginLog("Generating R1CS proving key");
-    config.beginRuntime("Proving Key");
+    config.beginRuntime("Generate Proving Key");
 
     final G1T alphaG1 = generatorG1.mul(alpha);
     final G1T betaG1 = generatorG1.mul(beta);
@@ -146,10 +146,10 @@ public class SerialSetup {
     config.endLog("Computing query H", false);
 
     config.endLog("Generating R1CS proving key");
-    config.endRuntime("Proving Key");
+    config.endRuntime("Generate Proving Key");
 
     config.beginLog("Generating R1CS verification key");
-    config.beginRuntime("Verification Key");
+    config.beginRuntime("Generate Verification Key");
 
     final GTT alphaG1betaG2 = pairing.reducedPairing(alphaG1, betaG2);
     final G2T gammaG2 = generatorG2.mul(gamma);
@@ -160,7 +160,7 @@ public class SerialSetup {
     config.endLog("Encoding gammaABC for R1CS verification key");
 
     config.endLog("Generating R1CS verification key");
-    config.endRuntime("Verification Key");
+    config.endRuntime("Generate Verification Key");
 
     // Construct the proving key.
     final ProvingKey<FieldT, G1T, G2T> provingKey =
