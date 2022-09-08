@@ -101,7 +101,7 @@ public class DistributedSetup {
     config.endLog("Generating G2 MSM Window Table");
 
     config.beginLog("Generating R1CS proving key");
-    config.beginRuntime("Proving Key Generation");
+    config.beginRuntime("Generate Proving Key");
 
     final G1T alphaG1 = generatorG1.mul(alpha);
     final G1T betaG1 = generatorG1.mul(beta);
@@ -156,10 +156,10 @@ public class DistributedSetup {
     config.endLog("Computing query H");
 
     config.endLog("Generating R1CS proving key");
-    config.endRuntime("Proving Key Generation");
+    config.endRuntime("Generate Proving Key");
 
     config.beginLog("Computing gammaABC for R1CS verification key");
-    config.beginRuntime("Verification Key Generation");
+    config.beginRuntime("Generate Verification Key");
     final GTT alphaG1betaG2 = pairing.reducedPairing(alphaG1, betaG2);
     final G2T gammaG2 = generatorG2.mul(gamma);
     final JavaPairRDD<Long, G1T> gammaABCG1 =
@@ -173,7 +173,7 @@ public class DistributedSetup {
     final List<G1T> UVWGammaG1 = Utils.convertFromPair(fullGammaABCG1.collect(), numInputs);
     ABC.unpersist();
     config.endLog("Computing gammaABC for R1CS verification key");
-    config.endRuntime("Verification Key Generation");
+    config.endRuntime("Generate Verification Key");
 
     // Construct the proving key.
     final ProvingKeyRDD<FieldT, G1T, G2T> provingKey =

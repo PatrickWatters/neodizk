@@ -277,11 +277,9 @@ public class Configuration implements Serializable {
         if (keyList.size() == valueList.size()) {
 
           // Write the CSV headers if they haven't been written yet.
-          //File tfile = new File(runtimeFileName);
-          //if(tfile.exists() && !tfile.isDirectory()) { 
-
-
-          if (!runtimeFiles.get(context)._2) {
+          File tfile = new File(runtimeFileName);
+          if(!tfile.exists()) { 
+            if (!runtimeFiles.get(context)._2) {
               for (int i = 0; i < keyList.size(); i++) {
                    sb.append(keyList.get(i));
           
@@ -300,6 +298,7 @@ public class Configuration implements Serializable {
           //     // Record that the header has now been written.
                runtimeFiles.put(context, new Tuple2<>(runtimeFileName, true));
            }
+          }
           // Write the CSV values row-wise.
           for (int i = 0; i < valueList.size(); i++) {
             if (!valueList.get(i).isEmpty() && valueList.get(i).peek()._2 == null) {
