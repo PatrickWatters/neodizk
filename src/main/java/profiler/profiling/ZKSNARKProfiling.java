@@ -241,7 +241,10 @@ public class ZKSNARKProfiling {
     final Assignment<BN254bFr> primary = construction._2();
     final JavaPairRDD<Long, BN254bFr> fullAssignment = construction._3();
 
-    config.setContext("Setup");
+
+    config.setContext("ETELogging");
+
+    //config.setContext("Setup");
     config.beginRuntimeMetadata("Size (inputs)", numConstraints);
     config.beginRuntimeMetadata("Executors", Long.valueOf(config.numExecutors()));
     config.beginRuntimeMetadata("Partitions", Long.valueOf(config.numPartitions()));
@@ -257,7 +260,7 @@ public class ZKSNARKProfiling {
 
     config.writeRuntimeLog(config.context());
 
-    config.setContext("Prover");
+    //config.setContext("Prover");
     config.beginRuntimeMetadata("Size (inputs)", numConstraints);
 
     config.beginLog(config.context());
