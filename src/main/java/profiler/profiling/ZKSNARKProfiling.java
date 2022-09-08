@@ -239,7 +239,7 @@ public class ZKSNARKProfiling {
     final JavaPairRDD<Long, BN254bFr> fullAssignment = construction._3();
 
     config.setContext("Setup");
-    config.beginRuntimeMetadata("Size (inputs)", numConstraints);
+    config.beginRuntimeMetadata("Size (numConstraints)", numConstraints);
 
     config.beginLog(config.context());
     config.beginRuntime("Setup");
