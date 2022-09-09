@@ -299,7 +299,12 @@ public class Configuration implements Serializable {
           }
           // Write the CSV values row-wise.
           for (int i = 0; i < valueList.size(); i++) {
-            if (!valueList.get(i).isEmpty() && valueList.get(i).peek()._2 == null) {
+
+            if (keyList.get(i) == "ElapsedTime")
+            {
+              sb.append(valueList.get(i).pop()._1 / 1000000000.0);
+
+            }else if (!valueList.get(i).isEmpty() && valueList.get(i).peek()._2 == null) {
               sb.append(valueList.get(i).pop()._1);
             } else if (valueList.get(i).isEmpty() || !valueList.get(i).peek()._2) {
               sb.append(-1);
