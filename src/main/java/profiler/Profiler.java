@@ -302,10 +302,10 @@ public class Profiler {
       //default when no arguments are given
 
       final String app = "zksnark-large";
-      final int numExecutors = 1;
-      final int numCores = 1;
-      final int numMemory = 2;
-      final int size = 1024;
+      final int numExecutors = 2;
+      final int numCores = 8;
+      final int numMemory = 8;
+      final int size = 32768;
       final int numPartitions = SparkUtils.numPartitions(numExecutors, size);
       final SparkConf conf = new SparkConf().setMaster("local").setAppName("default");
       conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer");
