@@ -108,15 +108,6 @@ public class Profiler {
   }
 
 
-
-
-
-
-
-
-
-
-
   public static void main(String[] args) {
     if (args.length > 0) {
       String input = args[0].toLowerCase();
@@ -227,26 +218,50 @@ public class Profiler {
         
         final String app = args[0].toLowerCase();
         final long size = (long) Math.pow(2, Long.parseLong(args[1]));
-        final Configuration config = new Configuration();
+         int numCores = 2;
+         int numMemory = 2;
+        final int numExecutors = 1;
+        final int numPartitions = SparkUtils.numPartitions(numExecutors, size);
 
         if (args.length == 4)
         {
-          config.numCores = Integer.parseInt(args[2]);
-          config.numMemory = Integer.parseInt(args[3].substring(0, args[3].length() - 1));
+          numCores = Integer.parseInt(args[2]);
+          numMemory = Integer.parseInt(args[3].substring(0, args[3].length() - 1));
         }
         else  if (args.length == 3)
         {
-            config.numCores = Integer.parseInt(args[2]);
+            numCores = Integer.parseInt(args[2]);
         }
-        
+        final SparkSession spark =
+            SparkSession.builder().appName(SparkUtils.appName(app)).getOrCreate();
+        spark.sparkContext().conf().set("spark.files.overwrite", "true");
+        spark
+            .sparkContext()
+            .conf()
+            .set("spark.serializer", "org.apache.spark.serializer.KryoSerializer");
+        spark.sparkContext().conf().registerKryoClasses(SparkUtils.zksparkClasses());
+
+        JavaSparkContext sc;
+        sc = new JavaSparkContext(spark.sparkContext());
+        final Configuration config =
+            new Configuration(
+                numExecutors,
+                numCores,
+                numMemory,
+                numPartitions,
+                sc,
+                StorageLevel.MEMORY_AND_DISK_SER());
 
         serialApp(app, config, size);
-      } else if (args.length == 5 || args.length == 6) {
-        final int numExecutors = Integer.parseInt(args[0]);
-        final int numCores = Integer.parseInt(args[1]);
-        final int numMemory = Integer.parseInt(args[2].substring(0, args[2].length() - 1));
-        final String app = args[3].toLowerCase();
-        final long size = (long) Math.pow(2, Long.parseLong(args[4]));
+      } 
+      else if (args.length == 5 || args.length == 6) 
+      {
+
+        final String app = args[0].toLowerCase();
+        final long size = (long) Math.pow(2, Long.parseLong(args[1]));
+        final int numCores = Integer.parseInt(args[2]);
+        final int numMemory = Integer.parseInt(args[3].substring(0, args[3].length() - 1));
+        final int numExecutors = Integer.parseInt(args[4]);
         int numPartitions;
         if (args.length == 5) {
           numPartitions = SparkUtils.numPartitions(numExecutors, size);
@@ -280,20 +295,22 @@ public class Profiler {
         System.out.println(
             "Args: {numExecutors} {numCores} {numMemory} {app} {size (log2)} {numPartitions(opt)}");
       }
-    } else {
+    } 
+    else 
+    {
+
+      //default when no arguments are given
+
       final String app = "zksnark-large";
-      final int numExecutors = 2;
+      final int numExecutors = 1;
       final int numCores = 1;
       final int numMemory = 2;
       final int size = 1024;
-
       final int numPartitions = SparkUtils.numPartitions(numExecutors, size);
-
       final SparkConf conf = new SparkConf().setMaster("local").setAppName("default");
       conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer");
       conf.set("spark.kryo.registrationRequired", "true");
       conf.registerKryoClasses(SparkUtils.zksparkClasses());
-
       JavaSparkContext sc;
       sc = new JavaSparkContext(conf);
 
