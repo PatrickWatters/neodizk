@@ -426,7 +426,8 @@ public class Configuration implements Serializable {
 
   public Long elapsedTimeInSecondsValue()
   {
-    return System.nanoTime() - startTime;
+    Double val = (System.nanoTime() - startTime) / 1000000000.0;
+    return val.longValue();
   }
 
   private String elapsedTimeInSeconds() {
