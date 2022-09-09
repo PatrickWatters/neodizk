@@ -110,7 +110,7 @@ public class ZKSNARKProfiling {
 
     config.beginRuntimeMetadata("ElapsedTime", config.elapsedTimeInSecondsValue());
     config.writeRuntimeLog(config.context());
-    
+
     System.out.println(isValid);
     assert (isValid);
   }
