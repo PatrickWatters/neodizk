@@ -311,7 +311,7 @@ public class Profiler {
       //default when no arguments are given
 
       final String app = "zksnark-large";
-      final int numExecutors = 2;
+      final int numExecutors = 1;
       final int numCores = 8;
       final int numMemory = 12;
       final int size = 1048576;
