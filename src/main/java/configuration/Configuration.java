@@ -200,7 +200,20 @@ public class Configuration implements Serializable {
     final Stack<Tuple2<Long, Boolean>> headerStack = runtimeLogs.get(context).get(header);
     headerStack.push(new Tuple2<>(data, null));
   }
+  public void beginRuntimeMetadataD(final String header, final Long data) {
+    if (!runtimeFlag) {
+      return;
+    }
 
+    if (!runtimeFiles.containsKey(context)
+        || !runtimeLogs.containsKey(context)
+        || !runtimeLogs.get(context).containsKey(header)) {
+      newRuntimeLog(context, header);
+    }
+
+    final Stack<Tuple2<Long, Boolean>> headerStack = runtimeLogs.get(context).get(header);
+    headerStack.push(new Tuple2<>(data, null));
+  }
   /**
    * Initalizes a new runtime record for the specified context and header in runtimeLogs. Note, if
    * the specified context and header are not present in the records, then the necessary records are
@@ -426,8 +439,7 @@ public class Configuration implements Serializable {
 
   public Long elapsedTimeInSecondsValue()
   {
-    Double val = (System.nanoTime() - startTime) / 1000000000.0;
-    return val.longValue();
+    return (System.nanoTime() - startTime) / 1000000000;
   }
 
   private String elapsedTimeInSeconds() {
