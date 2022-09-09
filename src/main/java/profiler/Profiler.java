@@ -107,6 +107,16 @@ public class Profiler {
     MatrixMultiplicationProfiling.GaussianProfile(config, n, d, bn, bd);
   }
 
+
+
+
+
+
+
+
+
+
+  
   public static void main(String[] args) {
     if (args.length > 0) {
       String input = args[0].toLowerCase();

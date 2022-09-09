@@ -109,7 +109,7 @@ public class ZKSNARKProfiling {
     config.endRuntime("Verifier");
 
     config.writeRuntimeLog(config.context());
-    config.beginRuntimeMetadata("ElapsedTime", Long.valueOf(config.elapsedTimeInSeconds()));
+    config.beginRuntimeMetadata("ElapsedTime", config.elapsedTimeInSecondsValue());
 
     System.out.println(isValid);
     assert (isValid);
@@ -171,7 +171,7 @@ public class ZKSNARKProfiling {
     config.endRuntime("Verifier");
     config.endLog(config.context());
     config.writeRuntimeLog(config.context());
-    config.beginRuntimeMetadata("ElapsedTime", Long.valueOf(config.elapsedTimeInSeconds()));
+    config.beginRuntimeMetadata("ElapsedTime", config.elapsedTimeInSecondsValue());
 
     System.out.println(isValid);
     assert (isValid);
@@ -238,7 +238,7 @@ public class ZKSNARKProfiling {
     config.endRuntime("Verifier");
 
     config.writeRuntimeLog(config.context());
-    config.beginRuntimeMetadata("ElapsedTime", Long.valueOf(config.elapsedTimeInSeconds()));
+    config.beginRuntimeMetadata("ElapsedTime", config.elapsedTimeInSecondsValue());
 
     System.out.println(isValid);
     assert (isValid);
@@ -305,7 +305,7 @@ public class ZKSNARKProfiling {
     config.endLog(config.context());
     config.endRuntime("Verifier");
     config.writeRuntimeLog(config.context());
-    config.beginRuntimeMetadata("ElapsedTime", Long.valueOf(config.elapsedTimeInSeconds()));
+    config.beginRuntimeMetadata("ElapsedTime", config.elapsedTimeInSecondsValue());
 
     System.out.println(isValid);
     assert (isValid);
