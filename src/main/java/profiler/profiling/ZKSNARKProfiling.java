@@ -108,9 +108,9 @@ public class ZKSNARKProfiling {
     config.endLog(config.context());
     config.endRuntime("Verifier");
 
-    config.writeRuntimeLog(config.context());
     config.beginRuntimeMetadata("ElapsedTime", config.elapsedTimeInSecondsValue());
-
+    config.writeRuntimeLog(config.context());
+    
     System.out.println(isValid);
     assert (isValid);
   }
@@ -170,8 +170,9 @@ public class ZKSNARKProfiling {
     config.endLog("Verifier-for-Serial");
     config.endRuntime("Verifier");
     config.endLog(config.context());
-    config.writeRuntimeLog(config.context());
     config.beginRuntimeMetadata("ElapsedTime", config.elapsedTimeInSecondsValue());
+    config.writeRuntimeLog(config.context());
+    //config.writeRuntimeLog(config.context());
 
     System.out.println(isValid);
     assert (isValid);
