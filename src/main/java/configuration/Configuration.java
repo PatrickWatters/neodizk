@@ -42,9 +42,9 @@ public class Configuration implements Serializable {
   // individual tasks in a given Spark job.
   private int numExecutors;
   // Nb cores per executor
-  private int numCores;
+  public int numCores;
   // Amount GB RAM memory per executor
-  private int numMemory;
+  public int numMemory;
   // Nb of partitions per RDD
   // Resilient Distributed Datasets (RDD) are a collection of various data
   // that are so big in size, that they cannot fit into a single node and
@@ -56,9 +56,7 @@ public class Configuration implements Serializable {
 
   /* Debug Flag runs assertion checks for debugging */
   private boolean debugFlag;
-  
-  //private StatsStorage stats_collector;
-  
+    
   public Configuration() {
     seed = 5;
     secureSeed = null;

@@ -116,7 +116,7 @@ public class Profiler {
 
 
 
-  
+
   public static void main(String[] args) {
     if (args.length > 0) {
       String input = args[0].toLowerCase();
@@ -222,11 +222,24 @@ public class Profiler {
         final int bd = Integer.parseInt(args[8]);
 
         gaussianTest(config, n, d, bn, bd);
-      } else if (args.length == 2) {
+      } 
+      else if (args.length == 2 || args.length == 3 || args.length == 4) {
+        
         final String app = args[0].toLowerCase();
         final long size = (long) Math.pow(2, Long.parseLong(args[1]));
-
         final Configuration config = new Configuration();
+
+        if (args.length == 4)
+        {
+          config.numCores = Integer.parseInt(args[2]);
+          config.numMemory = Integer.parseInt(args[3].substring(0, args[2].length() - 1));
+        }
+        else  if (args.length == 3)
+        {
+            config.numCores = Integer.parseInt(args[2]);
+        }
+        
+
         serialApp(app, config, size);
       } else if (args.length == 5 || args.length == 6) {
         final int numExecutors = Integer.parseInt(args[0]);
