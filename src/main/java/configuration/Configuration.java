@@ -56,7 +56,9 @@ public class Configuration implements Serializable {
 
   /* Debug Flag runs assertion checks for debugging */
   private boolean debugFlag;
-    
+  
+  //private StatsStorage stats_collector;
+  
   public Configuration() {
     seed = 5;
     secureSeed = null;
@@ -300,7 +302,8 @@ public class Configuration implements Serializable {
 
             if (keyList.get(i) == "ElapsedTime")
             {
-              sb.append(valueList.get(i).pop()._1 / 1000000000.0);
+                            sb.append(valueList.get(i).pop()._1 / 1000000000.0);
+
 
             }else if (!valueList.get(i).isEmpty() && valueList.get(i).peek()._2 == null) {
               sb.append(valueList.get(i).pop()._1);
