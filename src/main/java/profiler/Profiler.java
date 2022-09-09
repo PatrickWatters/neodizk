@@ -232,7 +232,7 @@ public class Profiler {
         if (args.length == 4)
         {
           config.numCores = Integer.parseInt(args[2]);
-          config.numMemory = Integer.parseInt(args[3].substring(0, args[2].length() - 1));
+          config.numMemory = Integer.parseInt(args[3].substring(0, args[3].length() - 1));
         }
         else  if (args.length == 3)
         {
