@@ -314,7 +314,7 @@ public class Profiler {
       final int numExecutors = 1;
       final int numCores = 8;
       final int numMemory = 12;
-      final int size = 1048576;
+      final int size = 1024;
       final int numPartitions = SparkUtils.numPartitions(numExecutors, size);
       final SparkConf conf = new SparkConf().setMaster("local").setAppName("default");
       conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer");
