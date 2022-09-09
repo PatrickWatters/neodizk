@@ -213,7 +213,16 @@ public class Profiler {
         final int bd = Integer.parseInt(args[8]);
 
         gaussianTest(config, n, d, bn, bd);
-      } 
+      }
+      else if (args.length == 2) {
+        final String app = args[0].toLowerCase();
+        final long size = (long) Math.pow(2, Long.parseLong(args[1]));
+
+        final Configuration config = new Configuration();
+        serialApp(app, config, size);
+      }
+      
+      /* 
       else if (args.length == 2 || args.length == 3 || args.length == 4) {
         
         final String app = args[0].toLowerCase();
@@ -253,7 +262,7 @@ public class Profiler {
                 StorageLevel.MEMORY_AND_DISK_SER());
 
         serialApp(app, config, size);
-      } 
+      } */
       else if (args.length == 5 || args.length == 6) 
       {
 
