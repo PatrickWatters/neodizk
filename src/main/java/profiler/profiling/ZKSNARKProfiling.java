@@ -109,6 +109,7 @@ public class ZKSNARKProfiling {
     config.endRuntime("Verifier");
 
     config.writeRuntimeLog(config.context());
+    config.beginRuntimeMetadata("ElapsedTime", Long.valueOf(config.elapsedTimeInSeconds()));
 
     System.out.println(isValid);
     assert (isValid);
@@ -167,10 +168,10 @@ public class ZKSNARKProfiling {
     final boolean isValid = Verifier.verify(CRS.verificationKey(), primary, proof, pairing, config);
     config.beginRuntimeMetadata("isValid", isValid ? 1L : 0L);
     config.endLog("Verifier-for-Serial");
-    config.endLog(config.context());
     config.endRuntime("Verifier");
-
+    config.endLog(config.context());
     config.writeRuntimeLog(config.context());
+    config.beginRuntimeMetadata("ElapsedTime", Long.valueOf(config.elapsedTimeInSeconds()));
 
     System.out.println(isValid);
     assert (isValid);
@@ -237,6 +238,7 @@ public class ZKSNARKProfiling {
     config.endRuntime("Verifier");
 
     config.writeRuntimeLog(config.context());
+    config.beginRuntimeMetadata("ElapsedTime", Long.valueOf(config.elapsedTimeInSeconds()));
 
     System.out.println(isValid);
     assert (isValid);
@@ -303,6 +305,7 @@ public class ZKSNARKProfiling {
     config.endLog(config.context());
     config.endRuntime("Verifier");
     config.writeRuntimeLog(config.context());
+    config.beginRuntimeMetadata("ElapsedTime", Long.valueOf(config.elapsedTimeInSeconds()));
 
     System.out.println(isValid);
     assert (isValid);
