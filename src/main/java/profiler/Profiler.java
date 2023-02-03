@@ -109,8 +109,124 @@ public class Profiler {
 
 
   public static void main(String[] args) {
+
     if (args.length > 0) {
       String input = args[0].toLowerCase();
+      
+      if(input.equals("smsm"))        
+      {
+        final String app = "vmsm-g1";
+        final long size = (long) Math.pow(2, Long.parseLong(args[1]));
+        final Configuration config = new Configuration();
+        serialApp(app, config, size);
+      }
+      else if(input.equals("dmsm"))
+      {
+        final String app = "vmsm-g1";
+        long fftsize = 1024;
+        int numExecutors = 1;
+        int numCores = 5;
+        int numMemory = 2;
+        int numPartitions = SparkUtils.numPartitions(numExecutors, fftsize);
+
+        if(args.length >1)
+        {
+          fftsize = (long) Math.pow(2, Long.parseLong(args[1]));
+        }
+        if(args.length >2)
+        {
+           numExecutors = Integer.parseInt(args[2]);
+           numPartitions = SparkUtils.numPartitions(numExecutors, fftsize);
+        }
+        if(args.length >3)
+        {
+          numCores = Integer.parseInt(args[3]);
+        }
+        if(args.length >4)
+        {
+          numMemory = Integer.parseInt(args[4]);
+        }
+        if(args.length >5)
+        {
+          numPartitions = Integer.parseInt(args[5]);
+        }
+    
+        final SparkConf conf = new SparkConf().setMaster("local").setAppName("default");
+        conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer");
+        conf.set("spark.kryo.registrationRequired", "true");
+        conf.registerKryoClasses(SparkUtils.zksparkClasses());
+        JavaSparkContext sc;
+        sc = new JavaSparkContext(conf);
+  
+        final Configuration config =
+            new Configuration(
+                numExecutors,
+                numCores,
+                numMemory,
+                numPartitions,
+                sc,
+                StorageLevel.MEMORY_AND_DISK_SER());
+        distributedApp(app, config, fftsize);
+
+      }else 
+
+      if(input.equals("sfft"))        
+      {
+        final String app = "fft";
+        final long size = (long) Math.pow(2, Long.parseLong(args[1]));
+        final Configuration config = new Configuration();
+        serialApp(app, config, size);
+      }
+      else if(input.equals("dfft"))
+      {
+        final String app = "fft";
+        long fftsize = 1024;
+        int numExecutors = 1;
+        int numCores = 5;
+        int numMemory = 2;
+        int numPartitions = SparkUtils.numPartitions(numExecutors, fftsize);
+
+        if(args.length >1)
+        {
+          fftsize = (long) Math.pow(2, Long.parseLong(args[1]));
+        }
+        if(args.length >2)
+        {
+           numExecutors = Integer.parseInt(args[2]);
+           numPartitions = SparkUtils.numPartitions(numExecutors, fftsize);
+        }
+        if(args.length >3)
+        {
+          numCores = Integer.parseInt(args[3]);
+        }
+        if(args.length >4)
+        {
+          numMemory = Integer.parseInt(args[4]);
+        }
+        if(args.length >5)
+        {
+          numPartitions = Integer.parseInt(args[5]);
+        }
+    
+        final SparkConf conf = new SparkConf().setMaster("local").setAppName("default");
+        conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer");
+        conf.set("spark.kryo.registrationRequired", "true");
+        conf.registerKryoClasses(SparkUtils.zksparkClasses());
+        JavaSparkContext sc;
+        sc = new JavaSparkContext(conf);
+  
+        final Configuration config =
+            new Configuration(
+                numExecutors,
+                numCores,
+                numMemory,
+                numPartitions,
+                sc,
+                StorageLevel.MEMORY_AND_DISK_SER());
+        distributedApp(app, config, fftsize);
+
+      }else 
+      
       if (input.equals("matmul") || input.equals("matmul_full")) {
         final String app = args[0].toLowerCase();
         final int numExecutors = Integer.parseInt(args[1]);

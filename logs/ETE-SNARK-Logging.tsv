@@ -1,0 +1,2 @@
+Size (inputs)	Executors	Partitions	Cores	Memory	Trsuted Setup (sec)	Generate Proving Key (sec)	Generate Verification Key (sec)	Prover (sec)	Witness polynomial Computation (sec)	Generate proof (sec)	Verifier (sec)	isValid
+1024	1	1	8	12	4.953025294	2.804221835	0.389634875	4.64167846	0.082915667	4.554366585	0.374401708	1

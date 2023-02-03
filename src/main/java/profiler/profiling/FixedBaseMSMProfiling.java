@@ -78,6 +78,10 @@ public class FixedBaseMSMProfiling {
 
     config.setContext("FixedBaseMSMG1");
     config.beginRuntimeMetadata("Size (inputs)", size);
+    config.beginRuntimeMetadata("Executors", Long.valueOf(config.numExecutors()));
+    config.beginRuntimeMetadata("Partitions per RDD", Long.valueOf(config.numPartitions()));
+    config.beginRuntimeMetadata("Cores per executor", Long.valueOf(config.numCores()));
+    config.beginRuntimeMetadata("GB RAM per executor", Long.valueOf(config.numMmeory()));
 
     config.beginLog("FixedBaseMSM");
     config.beginRuntime("FixedBaseMSM");

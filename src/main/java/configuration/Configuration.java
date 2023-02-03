@@ -273,10 +273,11 @@ public class Configuration implements Serializable {
 
         final StringBuilder sb = new StringBuilder();
         if (keyList.size() == valueList.size()) {
-
+          System.out.println("value size not the problem");
           // Write the CSV headers if they haven't been written yet.
           File tfile = new File(runtimeFileName);
           if(!tfile.exists()) { 
+            System.out.println("file doesnt exisit");
             if (!runtimeFiles.get(context)._2) {
               for (int i = 0; i < keyList.size(); i++) {
                    sb.append(keyList.get(i));
@@ -444,8 +445,8 @@ public class Configuration implements Serializable {
   private void newRuntimeLog(final String context, final String... headers) {
     // If runtimeFiles does not contain this context, then record a context and file name.
     if (!runtimeFiles.containsKey(context)) {
-      final String runtimeFileName = rootDirectory + "src/main/resources/logs/" + context + ".tsv";
-
+      //final String runtimeFileName = rootDirectory + "src/main/resources/logs/" + context + ".tsv";
+      final String runtimeFileName = "logs/" +  context + ".tsv";
       runtimeFiles.put(context, new Tuple2<>(runtimeFileName, false));
     }
 

@@ -1,0 +1,577 @@
+
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414906600
+spark.app.initial.jar.urls=spark://2d88182e8a98:44741/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414906105
+spark.driver.host=2d88182e8a98
+spark.driver.port=44741
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414909356
+spark.app.initial.jar.urls=spark://2d88182e8a98:33395/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414908914
+spark.driver.host=2d88182e8a98
+spark.driver.port=33395
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414912133
+spark.app.initial.jar.urls=spark://2d88182e8a98:33165/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414911654
+spark.driver.host=2d88182e8a98
+spark.driver.port=33165
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414914863
+spark.app.initial.jar.urls=spark://2d88182e8a98:45759/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414914407
+spark.driver.host=2d88182e8a98
+spark.driver.port=45759
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414917462
+spark.app.initial.jar.urls=spark://2d88182e8a98:40745/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414917022
+spark.driver.host=2d88182e8a98
+spark.driver.port=40745
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414920021
+spark.app.initial.jar.urls=spark://2d88182e8a98:39989/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414919577
+spark.driver.host=2d88182e8a98
+spark.driver.port=39989
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414922622
+spark.app.initial.jar.urls=spark://2d88182e8a98:41079/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414922187
+spark.driver.host=2d88182e8a98
+spark.driver.port=41079
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414925198
+spark.app.initial.jar.urls=spark://2d88182e8a98:43715/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414924766
+spark.driver.host=2d88182e8a98
+spark.driver.port=43715
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414927903
+spark.app.initial.jar.urls=spark://2d88182e8a98:44271/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414927458
+spark.driver.host=2d88182e8a98
+spark.driver.port=44271
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414930591
+spark.app.initial.jar.urls=spark://2d88182e8a98:33521/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414930144
+spark.driver.host=2d88182e8a98
+spark.driver.port=33521
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414933452
+spark.app.initial.jar.urls=spark://2d88182e8a98:42493/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414933005
+spark.driver.host=2d88182e8a98
+spark.driver.port=42493
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414936324
+spark.app.initial.jar.urls=spark://2d88182e8a98:38573/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414935855
+spark.driver.host=2d88182e8a98
+spark.driver.port=38573
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414939457
+spark.app.initial.jar.urls=spark://2d88182e8a98:35201/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414939019
+spark.driver.host=2d88182e8a98
+spark.driver.port=35201
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414943080
+spark.app.initial.jar.urls=spark://2d88182e8a98:44849/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414942618
+spark.driver.host=2d88182e8a98
+spark.driver.port=44849
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414948211
+spark.app.initial.jar.urls=spark://2d88182e8a98:37463/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414947713
+spark.driver.host=2d88182e8a98
+spark.driver.port=37463
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414956120
+spark.app.initial.jar.urls=spark://2d88182e8a98:43337/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414955642
+spark.driver.host=2d88182e8a98
+spark.driver.port=43337
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414965838
+spark.app.initial.jar.urls=spark://2d88182e8a98:35963/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414965345
+spark.driver.host=2d88182e8a98
+spark.driver.port=35963
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675414981839
+spark.app.initial.jar.urls=spark://2d88182e8a98:44413/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675414981377
+spark.driver.host=2d88182e8a98
+spark.driver.port=44413
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675415005067
+spark.app.initial.jar.urls=spark://2d88182e8a98:34309/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675415004580
+spark.driver.host=2d88182e8a98
+spark.driver.port=34309
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675415041228
+spark.app.initial.jar.urls=spark://2d88182e8a98:38975/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675415040742
+spark.driver.host=2d88182e8a98
+spark.driver.port=38975
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675415142454
+spark.app.initial.jar.urls=spark://2d88182e8a98:38915/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675415141936
+spark.driver.host=2d88182e8a98
+spark.driver.port=38915
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+3 executors
+2 cores per executor
+2 GB RAM memory per executor
+3 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675427615194
+spark.app.initial.jar.urls=spark://2d88182e8a98:41331/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675427614760
+spark.driver.host=2d88182e8a98
+spark.driver.port=41331
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+3 executors
+2 cores per executor
+2 GB RAM memory per executor
+3 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675427621750
+spark.app.initial.jar.urls=spark://2d88182e8a98:43295/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675427621319
+spark.driver.host=2d88182e8a98
+spark.driver.port=43295
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=
+----------------------------------------------------------------------------
+Instantiated as: 
+2 executors
+3 cores per executor
+2 GB RAM memory per executor
+2 partitions per RDD
+
+Spark Configuration:
+spark.app.id=local-1675427643238
+spark.app.initial.jar.urls=spark://2d88182e8a98:41777/jars/neodizk-0.2.0.jar
+spark.app.name=default
+spark.app.startTime=1675427642767
+spark.driver.host=2d88182e8a98
+spark.driver.port=41777
+spark.eventLog.dir=/tmp/spark-events
+spark.eventLog.enabled=true
+spark.executor.id=driver
+spark.jars=file:/home/dizk/target/neodizk-0.2.0.jar
+spark.kryo.classesToRegister=algebra.fields.Fp,algebra.fields.Fp2,algebra.fields.Fp6_3Over2,algebra.fields.Fp12_2Over3Over2,[Lalgebra.fields.Fp;,algebra.fields.AbstractFieldElementExpanded,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFr,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq2,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq6,algebra.curves.barreto_naehrig.bn254a.BN254aFields$BN254aFq12,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFrParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFqParameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq6Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aFq12Parameters,algebra.curves.barreto_naehrig.bn254a.BN254aG1,algebra.curves.barreto_naehrig.bn254a.BN254aG2,algebra.curves.barreto_naehrig.bn254a.BN254aGT,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG1Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aG2Parameters,algebra.curves.barreto_naehrig.bn254a.bn254a_parameters.BN254aGTParameters,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFr,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq2,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq6,algebra.curves.barreto_naehrig.bn254b.BN254bFields$BN254bFq12,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFrParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFqParameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq6Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bFq12Parameters,algebra.curves.barreto_naehrig.bn254b.BN254bG1,algebra.curves.barreto_naehrig.bn254b.BN254bG2,algebra.curves.barreto_naehrig.bn254b.BN254bGT,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG1Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bG2Parameters,algebra.curves.barreto_naehrig.bn254b.bn254b_parameters.BN254bGTParameters,relations.objects.LinearTerm,scala.Tuple2,org.apache.spark.api.java.JavaPairRDD,java.math.BigInteger,java.util.ArrayList,scala.collection.mutable.WrappedArray$ofRef,[Ljava.lang.Object;,org.apache.spark.util.AccumulatorContext,java.util.concurrent.atomic.LongAccumulator,java.lang.Class,scala.reflect.ClassTag
+spark.kryo.registrationRequired=true
+spark.master=local
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+spark.submit.deployMode=client
+spark.submit.pyFiles=

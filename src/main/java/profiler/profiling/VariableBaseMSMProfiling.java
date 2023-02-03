@@ -69,7 +69,10 @@ public class VariableBaseMSMProfiling {
 
     config.setContext("VariableBaseMSMG1");
     config.beginRuntimeMetadata("Size (inputs)", size);
-
+    config.beginRuntimeMetadata("Executors", Long.valueOf(config.numExecutors()));
+    config.beginRuntimeMetadata("Partitions per RDD", Long.valueOf(config.numPartitions()));
+    config.beginRuntimeMetadata("Cores per executor", Long.valueOf(config.numCores()));
+    config.beginRuntimeMetadata("GB RAM per executor", Long.valueOf(config.numMmeory()));
     config.beginLog("BosCosterVariableBaseMSM");
     config.beginRuntime("BosCosterVariableBaseMSM");
     final BN254aG1 res2 = VariableBaseMSM.distributedMSM(input); // UNUSED

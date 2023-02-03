@@ -44,7 +44,12 @@ public class FFTProfiling {
     config.setContext("FFT");
     config.beginRuntimeMetadata("Size (inputs)", size);
     config.beginRuntimeMetadata("Column Size (inputs)", k);
-
+    config.beginRuntimeMetadata("Row Size (inputs)", rows);
+    config.beginRuntimeMetadata("Rows", rows);
+    config.beginRuntimeMetadata("Executors", Long.valueOf(config.numExecutors()));
+    config.beginRuntimeMetadata("Partitions per RDD", Long.valueOf(config.numPartitions()));
+    config.beginRuntimeMetadata("Cores per executor", Long.valueOf(config.numCores()));
+    config.beginRuntimeMetadata("GB RAM per executor", Long.valueOf(config.numMmeory()));
     config.beginLog("FFT");
     config.beginRuntime("FFT");
     DistributedFFT.radix2FFT(distributed, rows, cols, fieldFactory).count();
