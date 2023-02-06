@@ -273,11 +273,9 @@ public class Configuration implements Serializable {
 
         final StringBuilder sb = new StringBuilder();
         if (keyList.size() == valueList.size()) {
-          System.out.println("value size not the problem");
           // Write the CSV headers if they haven't been written yet.
           File tfile = new File(runtimeFileName);
           if(!tfile.exists()) { 
-            System.out.println("file doesnt exisit");
             if (!runtimeFiles.get(context)._2) {
               for (int i = 0; i < keyList.size(); i++) {
                    sb.append(keyList.get(i));

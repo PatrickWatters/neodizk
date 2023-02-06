@@ -124,8 +124,8 @@ public class Profiler {
       {
         final String app = "vmsm-g1";
         long fftsize = 1024;
-        int numExecutors = 1;
-        int numCores = 5;
+        int numExecutors = 2;
+        int numCores = 3;
         int numMemory = 2;
         int numPartitions = SparkUtils.numPartitions(numExecutors, fftsize);
 
@@ -181,8 +181,8 @@ public class Profiler {
       {
         final String app = "fft";
         long fftsize = 1024;
-        int numExecutors = 1;
-        int numCores = 5;
+        int numExecutors = 2;
+        int numCores = 2;
         int numMemory = 2;
         int numPartitions = SparkUtils.numPartitions(numExecutors, fftsize);
 
@@ -207,13 +207,11 @@ public class Profiler {
         {
           numPartitions = Integer.parseInt(args[5]);
         }
-    
-        final SparkConf conf = new SparkConf().setMaster("local").setAppName("default");
-        conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer");
-        conf.set("spark.kryo.registrationRequired", "true");
-        conf.registerKryoClasses(SparkUtils.zksparkClasses());
-        JavaSparkContext sc;
-        sc = new JavaSparkContext(conf);
+
+        final SparkSession spark = SparkSession.builder().appName(SparkUtils.appName(app)).getOrCreate();
+        spark.sparkContext().conf().set("spark.serializer", "org.apache.spark.serializer.KryoSerializer");
+        spark.sparkContext().conf().registerKryoClasses(SparkUtils.zksparkClasses());
+        JavaSparkContext sc = new JavaSparkContext(spark.sparkContext());
   
         final Configuration config =
             new Configuration(
@@ -432,12 +430,17 @@ public class Profiler {
       final int numMemory = 12;
       final int size = 1024;
       final int numPartitions = SparkUtils.numPartitions(numExecutors, size);
-      final SparkConf conf = new SparkConf().setMaster("local").setAppName("default");
-      conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer");
-      conf.set("spark.kryo.registrationRequired", "true");
-      conf.registerKryoClasses(SparkUtils.zksparkClasses());
-      JavaSparkContext sc;
-      sc = new JavaSparkContext(conf);
+      final SparkSession spark =
+      SparkSession.builder().appName(SparkUtils.appName(app)).getOrCreate();
+      spark.sparkContext().conf().set("spark.files.overwrite", "true");
+      spark.sparkContext()
+      .conf()
+      .set("spark.serializer", "org.apache.spark.serializer.KryoSerializer");
+  spark.sparkContext().conf().registerKryoClasses(SparkUtils.zksparkClasses());
+
+  JavaSparkContext sc;
+  sc = new JavaSparkContext(spark.sparkContext());
+
 
       final Configuration config =
           new Configuration(
